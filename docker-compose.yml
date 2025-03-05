@@ -1,0 +1,44 @@
+# docker-compose.yml
+version: '3.8'
+
+services:
+  frontend:
+    build: ./frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend-node
+    environment:
+      - REACT_APP_API_URL=http://localhost:4000/api
+
+  backend-node:
+    build: ./backend-node
+    ports:
+      - "4000:4000"
+    depends_on:
+      - mongodb
+      - backend-python
+    environment:
+      - PORT=4000
+      - MONGO_URI=mongodb://mongodb:27017/chemtools
+      - PYTHON_API_URL=http://backend-python:5000/api
+
+  backend-python:
+    build: ./backend-python
+    ports:
+      - "5000:5000"
+    depends_on:
+      - mongodb
+    environment:
+      - PORT=5000
+      - MONGO_URI=mongodb://mongodb:27017/chemtools
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+
+volumes:
+  mongodb_data:
