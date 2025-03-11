@@ -1,0 +1,94 @@
+Alpha-1.1/
+├── frontend/
+│   ├── node_modules/
+│   ├── public/
+│   │   ├── favicon.ico
+│   │   ├── index.html
+│   │   ├── logo192.png
+│   │   ├── logo512.png
+│   │   ├── manifest.json
+│   │   └── robots.txt
+│   ├── src/
+│   │   ├── assets/
+│   │   ├── components/
+│   │   │   └── common/
+│   │   │       ├── Navbar.tsx        [NUEVO]
+│   │   │       ├── Footer.tsx        [NUEVO]
+│   │   │       └── FormularioEjemplo.tsx [NUEVO]
+│   │   ├── config/
+│   │   ├── data/                     [NUEVO]
+│   │   │   └── elements.json         [NUEVO]
+│   │   ├── hooks/
+│   │   ├── pages/
+│   │   │   ├── HomePage.tsx          [NUEVO]
+│   │   │   ├── NotFoundPage.tsx      [NUEVO]
+│   │   │   └── PeriodicTablePage.tsx [NUEVO]
+│   │   ├── services/
+│   │   │   └── api.ts               [NUEVO]
+│   │   ├── types/
+│   │   ├── utils/
+│   │   ├── App.css
+│   │   ├── App.tsx                  [MODIFICADO]
+│   │   ├── App.test.tsx
+│   │   ├── index.css
+│   │   ├── index.tsx
+│   │   ├── react-app-env.d.ts
+│   │   ├── reportWebVitals.ts
+│   │   └── setupTests.ts
+│   ├── .gitignore
+│   ├── CHANGELOG-FRONTEND.md        [NUEVO]
+│   ├── Dockerfile
+│   ├── package.json                [MODIFICADO]
+│   ├── README.md
+│   └── tsconfig.json
+├── backend-node/
+│   ├── node_modules/
+│   ├── src/
+│   │   ├── config/
+│   │   │   └── database.ts         [NUEVO]
+│   │   ├── controllers/
+│   │   │   ├── userController.ts   [NUEVO]
+│   │   │   └── compoundController.ts [NUEVO]
+│   │   ├── middleware/
+│   │   │   └── authMiddleware.ts   [NUEVO]
+│   │   ├── models/
+│   │   │   ├── User.ts            [NUEVO]
+│   │   │   └── Compound.ts        [NUEVO]
+│   │   ├── routes/
+│   │   │   ├── healthRoutes.ts    [NUEVO]
+│   │   │   ├── userRoutes.ts      [NUEVO]
+│   │   │   └── compoundRoutes.ts  [NUEVO]
+│   │   ├── services/
+│   │   ├── utils/
+│   │   └── app.ts                 [MODIFICADO]
+│   ├── CHANGELOG-BACKEND-NODE.md   [NUEVO]
+│   ├── Dockerfile
+│   ├── package.json               [MODIFICADO]
+│   ├── tsconfig.json             [NUEVO]
+│   └── tsconfig.esm.json         [NUEVO]
+├── backend-python/
+│   ├── app/
+│   │   ├── __init__.py           [MODIFICADO]
+│   │   ├── __main__.py           [NUEVO]
+│   │   ├── data/                 [NUEVO]
+│   │   │   └── atomic_weights.json [NUEVO]
+│   │   ├── routes/
+│   │   │   ├── __init__.py
+│   │   │   └── chemistry_routes.py [NUEVO]
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   ├── formula_validator.py [NUEVO]
+│   │   │   ├── molar_mass_calculator.py [NUEVO]
+│   │   │   └── unit_converter.py   [NUEVO]
+│   │   ├── utils/
+│   │   │   ├── __init__.py
+│   │   │   └── exceptions.py       [NUEVO]
+│   │   └── config.py              [MODIFICADO]
+│   ├── CHANGELOG-BACKEND-PYTHON.md [NUEVO]
+│   ├── Dockerfile
+│   ├── README.md
+│   └── requirements.txt           [MODIFICADO]
+├── .gitignore                    [NUEVO]
+├── Alpha-1.1.md                  [NUEVO]
+├── docker-compose.yml            [MODIFICADO]
+└── package.json                  [NUEVO]
